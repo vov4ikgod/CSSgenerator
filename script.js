@@ -4,14 +4,30 @@ const topRightRange = document.getElementById('top-right-range');
 const bottomLeftRange = document.getElementById('bottom-left-range');
 const bottomRightRange = document.getElementById('bottom-right-range');
 
+// Получаем результат input range 
+const topLeftResult = document.querySelector('top-left-result');
+const topRightResult = document.querySelector('top-right-result');
+const bottomLeftResult = document.querySelector('bottom-left-result');
+const bottomRightResult = document.querySelector('bottom-right-result');
+
 // Получаем все input range
-const inputRange = document.querySelectorAll('.input');
+const inputsRange = document.querySelectorAll('.input');
 
-// Получаем span который будет двигаться за rangre
-const slideValue = document.querySelectorAll('.result');
+// Получаем квадрат
+const cube = document.querySelector('.cube');
 
-// inputRange.addEventListener('input', () => {
-//     let value = topLeftRange.value;
-//     e.textContent = value;
-//     e.style.left = (value / 1.14) + '%';
-// });
+// Получаем результат
+const totalResult = document.getElementById('totalResult');
+
+
+// Связываем результаты и range
+const changeRadius = () => {
+    topLeftResult.innerHTML = topLeftRange.value;
+    topRightResult.innerHTML = topRightRange.value;
+    bottomLeftResult.innerHTML = bottomLeftRange.value;
+    bottomRightResult.innerHTML = bottomRightRange.value;
+};
+
+inputsRange.forEach((node) => {
+    node.addEventListener('input', changeRadius)
+});
