@@ -2,10 +2,33 @@ body {
     font-family: Montserrat;
 }
 
+/* title */
+
+.title {
+    margin: 0 auto 0 auto;
+}
+
 h1 {
     font-size: 50px;
     text-align: center;
+    letter-spacing: 5px;
 }
+
+h1 span {
+    transition: 0.2s;
+}
+
+h1:hover {
+    cursor: none;
+}
+
+h1 span:hover {
+    color: #78e744;
+    text-shadow: 0 0 5px #78e744;
+    cursor: none;
+}
+
+/* /////////////////// */
 
 .wrapper-flex {
     width: 100%;
