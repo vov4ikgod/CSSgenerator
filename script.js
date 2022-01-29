@@ -20,7 +20,7 @@ const btnResult = document.querySelector('.btn-result');
 const cube = document.querySelector('.cube');
 
 // Получаем input color
-const inputColor = document.querySelector('input-color');
+const inputColor = document.querySelector('.input-color');
 
 // Получаем результат border-radius
 const result = document.getElementById('totalResultRadius');
@@ -63,7 +63,7 @@ btnResult.addEventListener('click', totalResultBorder);
 
 
 const changeBackgroundColor = () => {
-    cube.style.backgroundColor = inputColor.value;
+    cube.style.background = inputColor.value;
 };
 
 inputColor.addEventListener('input', changeBackgroundColor);
