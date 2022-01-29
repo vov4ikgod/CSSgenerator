@@ -40,7 +40,7 @@ h1 span:hover {
 }
 
 .wrapper {
-    width: 60%;
+    width: 70%;
     height: 50%;
     display: flex;
     flex-flow: column;
@@ -60,8 +60,8 @@ h1 span:hover {
 }
 
 .cube {
-    width: 200px;
-    height: 200px; 
+    width: 175px;
+    height: 175px; 
     background-color: #78e744;
 }
 
@@ -91,6 +91,37 @@ h1 span:hover {
     border: 1px solid #78e744;
     box-shadow: none;
 }
+
+
+
+
+/* кнопка с цветом */ 
+
+.input-color-div {
+    text-align: center;
+}
+
+.color-title {
+    margin-bottom: -1px;
+}
+
+.input-color {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 75px;
+    height: 75px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;  
+}
+
+.input-color::-webkit-color-swatch {
+    border-radius: 100px 100px 10px 100px;
+    border: none;
+}
+
+/* ////////////// */
 
 
 
@@ -452,7 +483,27 @@ h1 span:hover {
     cursor: pointer;
 }
 
-
-
-
 /* //////////////////////////////////////////////////////// */
+
+
+
+
+
+
+@media (max-width: 1375px) {
+
+    .wrapper {
+        width: 80%;
+        height: 50%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+    }
+
+    .cube {
+        width: 175px;
+        height: 175px; 
+        background-color: #78e744;
+    }
+
+}

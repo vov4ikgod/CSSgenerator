@@ -19,9 +19,14 @@ const btnResult = document.querySelector('.btn-result');
 // Получаем квадрат
 const cube = document.querySelector('.cube');
 
-// Получаем результат
-const result = document.getElementById('totalResult');
+// Получаем input color
+const inputColor = document.querySelector('input-color');
 
+// Получаем результат border-radius
+const result = document.getElementById('totalResultRadius');
+
+// Получаем результат background-color
+const resultBackgroundColor = document.getElementById('totalResultBackgroundColor');
 
 // Связываем результаты и range
 const changeRadius = () => {
@@ -41,18 +46,25 @@ const changeRadius = () => {
     bottomRightResult.textContent = valueBottomRight;
     bottomRightResult.style.left = (valueBottomRight / 1.14) + '%';
 
-
-
     cube.style.borderRadius = topLeftRange.value + 'px ' + topRightRange.value + 'px ' + bottomRightRange.value + 'px ' + bottomLeftRange.value + 'px ';
-    console.log(cube);
-};
 
-const totalResult = () => {
-    result.innerHTML = topLeftRange.value + 'px ' + topRightRange.value + 'px ' + bottomRightRange.value + 'px ' + bottomLeftRange.value + 'px;';
 };
-
-btnResult.addEventListener('click', totalResult);
 
 inputsRange.forEach((node) => {
     node.addEventListener('input', changeRadius)
 });
+
+const totalResultBorder = () => {
+    result.innerHTML = topLeftRange.value + 'px ' + topRightRange.value + 'px ' + bottomRightRange.value + 'px ' + bottomLeftRange.value + 'px;';
+};
+
+btnResult.addEventListener('click', totalResultBorder);
+
+
+
+const changeBackgroundColor = () => {
+    cube.style.backgroundColor = inputColor.value;
+};
+
+inputColor.addEventListener('input', changeBackgroundColor);
+
