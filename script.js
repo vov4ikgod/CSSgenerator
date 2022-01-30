@@ -26,8 +26,8 @@ const inputColor = document.querySelector('.input-color');
 const result = document.getElementById('totalResultRadius');
 
 // Получаем результат background-color
-const resultBackgroundColor = document.getElementById('totalResultBackgroundColor');
-
+const resultBackgroundColor = document.getElementById('total-result-background-color');
+console.log(resultBackgroundColor);
 // Связываем результаты и range
 const changeRadius = () => {
     let valueTopLeft = topLeftRange.value;
@@ -61,10 +61,15 @@ const totalResultBorder = () => {
 btnResult.addEventListener('click', totalResultBorder);
 
 
-
 const changeBackgroundColor = () => {
-    cube.style.background = inputColor.value;
+    cube.style.backgroundColor = inputColor.value;
+};
+
+const totalResultBackground = () => {
+    resultBackgroundColor.innerHTML = inputColor.value + ';';
 };
 
 inputColor.addEventListener('input', changeBackgroundColor);
+
+btnResult.addEventListener('click', totalResultBackground);
 
